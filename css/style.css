@@ -1,0 +1,195 @@
+/*3.2.1 style*/
+section {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.number3 {
+	top: 10%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	color: #00FD6F;	
+	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+	font-weight: bolder;
+	z-index: 50;
+	animation: number  1s 16s  infinite;
+	transition: all;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+.number2 {
+	top: 10%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	color: #FD9900;	
+	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+	font-weight: bolder;
+	z-index: 50;
+	animation: number 1s 17s  infinite;
+	transition: all;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+.number1 {
+	top: 10%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	color: #FD0000;
+	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+	font-weight: bolder;
+	z-index: 50;
+	animation: number  1s 18s  infinite;
+	transition: all;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+/*styleimage*/
+.alarm-clock-image {
+	opacity: 0;
+	margin-left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	animation: alarmclock  0.1s 20s infinite;
+	/*animation-duration: 0.1s;*/
+	max-height: 500px;
+	max-width: 500px;
+}
+.wake-up {
+	top: 10%;
+	margin-left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	color: white;	
+	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+	font-weight: bolder;
+	z-index: 50;
+	animation: title  1s 19s infinite;
+	transition: all;
+	animation-iteration-count: 3;
+	opacity: 0;
+}
+
+@keyframes alarmclock {
+	  0%   {opacity: 0;}
+	  5%   {opacity: 100; transform: translate(-50%) rotate(-20deg);}
+	 10%   {transform: translate(-50%) rotate(20deg);}
+	 30%   {transform: translate(-50%) rotate(-20deg);}
+	 40%   {transform: translate(-50%) rotate(20deg);}
+	 50%   {transform: translate(-50%) rotate(-20deg);}
+	 60%   {transform: translate(-50%) rotate(20deg);}
+	 70%   {transform: translate(-50%) rotate(20deg);}
+	 80%   {transform: translate(-50%) rotate(20deg);}
+	 90%   {transform: translate(-50%) rotate(20deg);}
+	 100%   {transform: translate(-50%) rotate(20deg);}
+  
+}
+
+@keyframes title {
+	0% {opacity: 0}
+    50% { 
+    	opacity: 100;
+    	font-size: 100px;
+    	letter-spacing: 5px;
+    	color: #b87c04;
+    	top: 50%;
+    	text-transform: uppercase;
+    }
+    100% {
+    	opacity: 0;
+    }
+
+    
+} 
+@keyframes number {
+	0% {opacity: 0}
+    50% { 
+    	opacity: 100;
+    	font-size: 300px;
+    	top: 50%;
+
+    }
+    100% {
+    	opacity: 0;
+    }
+
+    
+} 
+/*loading*/
+.text-loading {
+    margin: 12% 14%;
+    position: absolute;
+    float: left;
+}
+.text-loading p {
+	font-size: 50px;
+    animation: loadingtext 3s infinite;
+    animation-fill-mode: forwards;
+    float: left;
+}
+@keyframes loadingtext{
+    0%{
+    	width:0;
+    	color:black;
+        border-right: .10em solid gray;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold; opacity: 0;
+    }
+    100%{
+    	width:100%;
+    	color:black;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+        opacity: 1;
+    }
+}
+.wrapper {
+	height: 100vh;
+	widows: 100vh;
+}
+.loader-circle {
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	background: linear-gradient(black 10%,white 60%);
+	position: relative;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);
+    animation: loader 2s linear infinite;
+    float: left;
+
+ }
+
+.loader-circle-child {
+	width: 240px;
+	height: 240px;
+	border-radius: 100%;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+@keyframes loader {
+  0% { transform: translate(-50%,-50%) rotate(0deg); }
+  100% {transform: translate(-50%,-50%) rotate(360deg); }
+}
+.circle-wrapper {opacity: 0;
+				animation: circlewrapper 15s;
+				animation-iteration-count: 1;
+
+
+}
+@keyframes circlewrapper {
+	0% {opacity: 100}
+    100% { opacity: 0;
+    }
+
+}
