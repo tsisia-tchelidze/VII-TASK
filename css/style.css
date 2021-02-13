@@ -54,6 +54,7 @@ section {
 	position: absolute;
 	animation: alarmclock  0.1s 20s infinite;
 	/*animation-duration: 0.1s;*/
+	top: 190px;
 	max-height: 500px;
 	max-width: 500px;
 }
